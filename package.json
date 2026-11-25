@@ -1,0 +1,23 @@
+{
+  "name": "sammyify",
+  "productName": "Sammyify",
+  "version": "1.0.0",
+  "description": "Sammyify - my personal music player",
+  "main": "main.js",
+  "author": "Me",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "local.sammyify.app",
+    "productName": "Sammyify",
+    "files": ["main.js", "index.html", "package.json"],
+    "directories": { "output": "dist" },
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }], "artifactName": "Sammyify.exe" }
+  }
+}
